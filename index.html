@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saim Khan - Full Stack Developer Portfolio" />
+  <title>Saim Khan | Developer Portfolio</title>
+
+  <!-- ✅ CSS linked correctly -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- ================================================
+       LOADING SCREEN
+  ================================================ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">SK</div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill"></div>
+      </div>
+      <p class="loader-label">LOADING...</p>
+    </div>
+  </div>
+
+  <!-- ================================================
+       CUSTOM CURSOR
+  ================================================ -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ================================================
+       NAVIGATION BAR
+  ================================================ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="bracket">&lt;</span>SK<span class="bracket">/&gt;</span>
+      </a>
+
+      <!-- Nav Links -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home"     class="nav-link active">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right side controls -->
+      <div class="nav-controls">
+        <button id="theme-btn" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================================================
+       HERO SECTION
+  ================================================ -->
+  <section id="home" class="hero-section">
+
+    <!-- Animated particle canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Grid lines overlay -->
+    <div class="hero-grid"></div>
+
+    <!-- Main hero content -->
+    <div class="hero-content">
+
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span>
+        Available for Hire
+      </div>
+
+      <h1 class="hero-name reveal">
+        <span class="name-top">SAIM</span>
+        <span class="name-bottom neon-text">KHAN</span>
+      </h1>
+
+      <div class="hero-typing reveal">
+        <span class="typing-prefix">I build&nbsp;</span>
+        <span id="typed-output"></span>
+        <span class="type-cursor">|</span>
+      </div>
+
+      <p class="hero-desc reveal">
+        Crafting next-generation digital experiences with clean code,
+        bold design, and cutting-edge technology.
+      </p>
+
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View Work
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Hire Me
+        </a>
+      </div>
+
+      <!-- Animated stats counters -->
+      <div class="hero-stats reveal">
+        <div class="stat-box">
+          <span class="count" data-target="20">0</span><sup>+</sup>
+          <p>Projects</p>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-box">
+          <span class="count" data-target="15">0</span><sup>+</sup>
+          <p>Clients</p>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-box">
+          <span class="count" data-target="3">0</span><sup>+</sup>
+          <p>Years Exp.</p>
+        </div>
+      </div>
+
+    </div><!-- /hero-content -->
+
+    <!-- Scroll down indicator -->
+    <div class="scroll-hint">
+      <div class="scroll-line-anim"></div>
+      <span>SCROLL</span>
+    </div>
+
+  </section><!-- /hero-section -->
+
+  <!-- ================================================
+       ABOUT SECTION
+  ================================================ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <span class="section-tag">// ABOUT</span>
+        <h2 class="section-title">Who Am <span class="accent">I?</span></h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Left: animated avatar -->
+        <div class="about-left reveal">
+          <div class="avatar-frame">
+            <div class="avatar-core">
+              <span class="avatar-letters">SK</span>
+            </div>
+            <!-- Rotating orbital rings -->
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+            <!-- Floating tech tags -->
+            <span class="float-tag ft-1"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="float-tag ft-2"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="float-tag ft-3"><i class="fab fa-js"></i> JS</span>
+            <span class="float-tag ft-4"><i class="fab fa-python"></i> Python</span>
+          </div>
+        </div>
+
+        <!-- Right: text + timeline -->
+        <div class="about-right reveal">
+          <p class="about-intro">
+            Hello! I'm <span class="accent">Saim Khan</span>, a passionate Full‑Stack Developer
+            and UI/UX enthusiast based in Pakistan 🇵🇰
+          </p>
+          <p class="about-body">
+            I specialise in building modern, high‑performance web applications. With a strong
+            foundation in both frontend and backend technologies I turn complex problems into
+            elegant digital solutions — from pixel‑perfect interfaces to robust automation scripts.
+          </p>
+
+          <!-- Experience timeline -->
+          <div class="timeline">
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-info">
+                <span class="tl-year">2022</span>
+                <h4>Started Coding Journey</h4>
+                <p>Mastered HTML, CSS & Python fundamentals</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-info">
+                <span class="tl-year">2023</span>
+                <h4>Advanced JavaScript & C++</h4>
+                <p>Deep‑dived into algorithms and DOM manipulation</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-info">
+                <span class="tl-year">2024</span>
+                <h4>Full‑Stack Development</h4>
+                <p>Built 20+ professional projects for real clients</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot tl-dot--active"></div>
+              <div class="tl-info">
+                <span class="tl-year">2025</span>
+                <h4>Freelancing & Growing</h4>
+                <p>Working with global clients & expanding skillset</p>
+              </div>
+            </div>
+
+          </div><!-- /timeline -->
+
+          <a href="#contact" class="btn btn-primary" style="margin-top:1.8rem;">
+            <i class="fas fa-envelope"></i> Let's Connect
+          </a>
+        </div>
+
+      </div><!-- /about-grid -->
+    </div>
+  </section>
+
+  <!-- ================================================
+       SKILLS SECTION
+  ================================================ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <span class="section-tag">// SKILLS</span>
+        <h2 class="section-title">My <span class="accent">Arsenal</span></h2>
+      </div>
+
+      <div class="skills-wrapper">
+
+        <!-- Skill progress bars -->
+        <div class="skill-bars reveal">
+
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="fab fa-html5 icon-html"></i> HTML5</span>
+              <span class="skill-pct">95%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w="95" style="--bar-color:#e44d26;"></div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="fab fa-css3-alt icon-css"></i> CSS3</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w="90" style="--bar-color:#264de4;"></div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="fab fa-js icon-js"></i> JavaScript</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w="85" style="--bar-color:#f7df1e;"></div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="fab fa-python icon-py"></i> Python</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w="80" style="--bar-color:#3572a5;"></div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="fas fa-code icon-cpp"></i> C++</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w="70" style="--bar-color:#00599c;"></div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="fab fa-github icon-gh"></i> GitHub</span>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w="88" style="--bar-color:#ffffff;"></div>
+            </div>
+          </div>
+
+        </div><!-- /skill-bars -->
+
+        <!-- Skill icon cards -->
+        <div class="skill-cards reveal">
+
+          <div class="sk-card">
+            <div class="sk-icon" style="--ic:#e44d26; --ib:rgba(228,77,38,.12);">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h4>HTML5</h4>
+            <p>Semantic & accessible markup</p>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-icon" style="--ic:#264de4; --ib:rgba(38,77,228,.12);">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h4>CSS3</h4>
+            <p>Animations & responsive design</p>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-icon" style="--ic:#f7df1e; --ib:rgba(247,223,30,.12);">
+              <i class="fab fa-js"></i>
+            </div>
+            <h4>JavaScript</h4>
+            <p>Dynamic & interactive interfaces</p>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-icon" style="--ic:#3572a5; --ib:rgba(53,114,165,.12);">
+              <i class="fab fa-python"></i>
+            </div>
+            <h4>Python</h4>
+            <p>Scripting & automation</p>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-icon" style="--ic:#4a9edd; --ib:rgba(74,158,221,.12);">
+              <i class="fas fa-code"></i>
+            </div>
+            <h4>C++</h4>
+            <p>Systems & algorithms</p>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-icon" style="--ic:#e0e0e0; --ib:rgba(255,255,255,.06);">
+              <i class="fab fa-github"></i>
+            </div>
+            <h4>GitHub</h4>
+            <p>Version control & CI/CD</p>
+          </div>
+
+        </div><!-- /skill-cards -->
+
+      </div><!-- /skills-wrapper -->
+    </div>
+  </section>
+
+  <!-- ================================================
+       PROJECTS SECTION
+  ================================================ -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <span class="section-tag">// PROJECTS</span>
+        <h2 class="section-title">Featured <span class="accent">Work</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="proj-card reveal" data-tilt>
+          <div class="proj-thumb thumb-calc">
+            <i class="fas fa-calculator proj-ico"></i>
+            <div class="proj-hover-links">
+              <a href="#" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="icon-btn" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-chips">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <h3>Calculator App</h3>
+            <p>Sleek calculator with history log, keyboard support, and smooth button animations.</p>
+            <div class="proj-actions">
+              <a href="#" class="btn btn-sm btn-outline">Live Demo <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="btn btn-sm btn-ghost"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="proj-card reveal" data-tilt>
+          <div class="proj-thumb thumb-game">
+            <i class="fas fa-gamepad proj-ico"></i>
+            <div class="proj-hover-links">
+              <a href="#" class="icon-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="icon-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-chips">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <h3>Gaming Website</h3>
+            <p>Immersive gaming portal with game showcases, leaderboards, and neon‑lit UI.</p>
+            <div class="proj-actions">
+              <a href="#" class="btn btn-sm btn-outline">Live Demo <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="btn btn-sm btn-ghost"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="proj-card reveal" data-tilt>
+          <div class="proj-thumb thumb-anime">
+            <i class="fas fa-dragon proj-ico"></i>
+            <div class="proj-hover-links">
+              <a href="#" class="icon-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="icon-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-chips">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <h3>Anime Website</h3>
+            <p>Stylish anime streaming UI with search, categories, and animated hero banners.</p>
+            <div class="proj-actions">
+              <a href="#" class="btn btn-sm btn-outline">Live Demo <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="btn btn-sm btn-ghost"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="proj-card reveal" data-tilt>
+          <div class="proj-thumb thumb-ai">
+            <i class="fas fa-robot proj-ico"></i>
+            <div class="proj-hover-links">
+              <a href="#" class="icon-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="icon-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-chips">
+              <span>HTML</span><span>CSS</span><span>JS</span><span>API</span>
+            </div>
+            <h3>AI Chat Website</h3>
+            <p>Conversational AI chat interface powered by an LLM API with real‑time typing effects.</p>
+            <div class="proj-actions">
+              <a href="#" class="btn btn-sm btn-outline">Live Demo <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="btn btn-sm btn-ghost"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 (Featured) -->
+        <div class="proj-card proj-card--featured reveal" data-tilt>
+          <div class="proj-thumb thumb-port">
+            <i class="fas fa-user-astronaut proj-ico"></i>
+            <div class="proj-hover-links">
+              <a href="#" class="icon-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="icon-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <span class="featured-badge"><i class="fas fa-star"></i> Featured</span>
+            <div class="proj-chips">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <h3>Portfolio Website</h3>
+            <p>This very portfolio — a cyberpunk‑inspired, fully animated personal developer site with advanced UI/UX.</p>
+            <div class="proj-actions">
+              <a href="#" class="btn btn-sm btn-outline">Live Demo <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="btn btn-sm btn-ghost"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ================================================
+       SERVICES SECTION
+  ================================================ -->
+  <section id="services" class="section services-section">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <span class="section-tag">// SERVICES</span>
+        <h2 class="section-title">What I <span class="accent">Offer</span></h2>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="srv-card reveal">
+          <div class="srv-icon-wrap">
+            <i class="fas fa-globe srv-icon"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>Fast, scalable, SEO‑optimised websites built from the ground up using HTML, CSS & JavaScript.</p>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> Responsive Design</li>
+            <li><i class="fas fa-check-circle"></i> Cross‑browser Compatible</li>
+            <li><i class="fas fa-check-circle"></i> Performance Optimised</li>
+          </ul>
+          <div class="srv-price">From <span>$99</span></div>
+        </div>
+
+        <div class="srv-card reveal">
+          <div class="srv-icon-wrap">
+            <i class="fas fa-paint-brush srv-icon"></i>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, intuitive interfaces crafted to delight users and drive real conversions.</p>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> Wireframing & Prototyping</li>
+            <li><i class="fas fa-check-circle"></i> User Research</li>
+            <li><i class="fas fa-check-circle"></i> Visual Design Systems</li>
+          </ul>
+          <div class="srv-price">From <span>$79</span></div>
+        </div>
+
+        <div class="srv-card reveal">
+          <div class="srv-icon-wrap">
+            <i class="fab fa-python srv-icon"></i>
+          </div>
+          <h3>Python Programming</h3>
+          <p>Automation scripts, web scrapers, data pipelines, and bots built with clean Python code.</p>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> Task Automation</li>
+            <li><i class="fas fa-check-circle"></i> Web Scraping</li>
+            <li><i class="fas fa-check-circle"></i> API Integration</li>
+          </ul>
+          <div class="srv-price">From <span>$59</span></div>
+        </div>
+
+        <div class="srv-card reveal">
+          <div class="srv-icon-wrap">
+            <i class="fas fa-laptop-code srv-icon"></i>
+          </div>
+          <h3>Frontend Development</h3>
+          <p>Pixel‑perfect, interactive frontends with silky animations and flawless user experience.</p>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> Modern CSS Animations</li>
+            <li><i class="fas fa-check-circle"></i> JavaScript Interactivity</li>
+            <li><i class="fas fa-check-circle"></i> Mobile‑First Approach</li>
+          </ul>
+          <div class="srv-price">From <span>$89</span></div>
+        </div>
+
+      </div><!-- /services-grid -->
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTACT SECTION
+  ================================================ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <span class="section-tag">// CONTACT</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Info side -->
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            Have a project in mind or just want to say hi?
+            I'm always open to new opportunities. Let's build something amazing together!
+          </p>
+
+          <div class="contact-items">
+
+            <div class="c-item">
+              <div class="c-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:saimkhan@email.com">saimkhan@email.com</a>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span>Location</span>
+                <p>Pakistan 🇵🇰</p>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <span>Availability</span>
+                <p>Mon – Fri, 9 AM – 6 PM PKT</p>
+              </div>
+            </div>
+
+          </div><!-- /contact-items -->
+
+          <!-- Social links -->
+          <div class="social-row">
+            <a href="#" class="soc-btn soc-gh"  title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="soc-btn soc-ig"  title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="soc-btn soc-li"  title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="soc-btn soc-tw"  title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Form side -->
+        <div class="contact-form-box reveal">
+          <form id="contact-form" novalidate>
+
+            <div class="field-group">
+              <label for="f-name">Your Name</label>
+              <div class="field-wrap">
+                <i class="fas fa-user"></i>
+                <input type="text" id="f-name" name="name" placeholder="Saim Khan" autocomplete="off" />
+              </div>
+              <span class="field-error" id="err-name"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="f-email">Your Email</label>
+              <div class="field-wrap">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="f-email" name="email" placeholder="you@example.com" autocomplete="off" />
+              </div>
+              <span class="field-error" id="err-email"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="f-msg">Your Message</label>
+              <div class="field-wrap field-wrap--ta">
+                <i class="fas fa-comment-alt"></i>
+                <textarea id="f-msg" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+              </div>
+              <span class="field-error" id="err-msg"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="send-btn">
+              <span id="btn-label"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span id="btn-loader" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending…</span>
+            </button>
+
+            <div id="form-success" class="success-msg" style="display:none;">
+              <i class="fas fa-check-circle"></i> Message sent! I'll reply within 24 hours.
+            </div>
+
+          </form>
+        </div>
+
+      </div><!-- /contact-grid -->
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer id="footer">
+
+    <div class="footer-upper">
+      <div class="footer-logo">
+        <span class="bracket">&lt;</span>SK<span class="bracket">/&gt;</span>
+      </div>
+      <p>Crafting the future, one line of code at a time.</p>
+      <div class="social-row social-row--center">
+        <a href="#" class="soc-btn soc-gh"  title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="soc-btn soc-ig"  title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="soc-btn soc-li"  title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="soc-btn soc-tw"  title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-lower">
+      <p>&copy; 2025 <span class="accent">Saim Khan</span>. All rights reserved. Built with <i class="fas fa-heart" style="color:#e74c3c;"></i> &amp; ☕</p>
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ✅ JavaScript linked correctly -->
+  <script src="script.js"></script>
+
+</body>
+</html>
