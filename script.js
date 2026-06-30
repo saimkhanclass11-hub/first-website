@@ -299,7 +299,7 @@ const sendBtn      = document.getElementById('send-btn');
 
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+    
 
     const nameField    = document.getElementById('f-name');
     const emailField   = document.getElementById('f-email');
